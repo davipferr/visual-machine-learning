@@ -1,0 +1,39 @@
+{
+  "name": "mini-neural-net",
+  "version": "0.1.0",
+  "description": "A tiny, educational neural network library written from scratch: backpropagation, gradient descent optimizers and the playground that shows them learning (and overfitting).",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/mini-neural-net.cjs",
+  "module": "./dist/mini-neural-net.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/mini-neural-net.js",
+      "require": "./dist/mini-neural-net.cjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "build:playground": "vite build --mode playground",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11"
+  }
+}
